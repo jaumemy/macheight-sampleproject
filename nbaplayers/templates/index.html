@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+  <title>Player List</title>
+{% endblock %}
+
+{% block content %}
+  <p>This is the content</p>
+  {% for i in response.values %}
+    {{ i }}
+    <br>
+  {% endfor %}
+{% endblock %}
