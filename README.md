@@ -1,9 +1,17 @@
 ### Mach Eight Sample Project
 
-Thank you for taking the time to complete this sample project. We're a tech
-first company and we value our engineers tremendously. We're are looking for
-hard working, smart engineers with either excellent experience or lots of
-potential.
+
+## Quick Start
+
+To get this project up and running locally on your computer:
+1. Set up the [Python development environment](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment).
+   It is recommended to use a Python virtual environment.
+1. Assuming you have Python setup, run the following commands (if you're on Windows you may use `py` or `py -3` instead of `python` to start Python):
+   ```
+   pip3 install -r requirements.txt
+   python3 manage.py runserver
+   ```
+1. Open a browser to `http://127.0.0.1:8000/` to open the  site
 
 
 ## Project
@@ -19,10 +27,6 @@ below. The app must load the data in JSON format from the mach-eight url above.
 The URL is not paginated, and it's ok to load the entire dataset into memory at
 once. All pages include a navbar with 2 items: "Player List" and "Player
 Matches"
-
-It is expected that this can be completed in 1-3 hours. If it's taking longer
-than that, please reach out. It's possible we mis-scoped it, and I don't want
-anyone spending a full day on this.
 
 
 # Player List Page
@@ -49,20 +53,3 @@ user enters 153, the page will display Alex Acker and Hassan Adams as one of
 the pairs (there may be other pairs as well).
 
 The algorithm to find the pairs must be faster than O(n^2).
-
-## Evaluation
-
-The project will be evaluated on its correctness, i.e., all features work as
-specified. The cleanliness of the code will also be evaluated, as well as the
-architecture of the components. The matches page must work in a reasonable
-amount of time and memory usage. Best practices and unit tests are looked upon
-very kindly.
-
-This is _not_ a closed book test. You are encouraged to reach out with any
-questions that you come across.
-
-## Submission
-
-The preferred form of submission is by publishing a public repo on github with
-your code and a README file explaining how to run the code. I also can accept
-an emailed zip file with the same contents.
