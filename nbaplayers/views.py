@@ -43,6 +43,7 @@ def player_matches(request):
 
         sum = request.POST.get('sum')
 
+
         def pairs(arr, n, sum):
 
             dict_ = dict()
@@ -50,20 +51,23 @@ def player_matches(request):
 
             for i in range(n):
 
-                temp = sum - arr[i]
+                number = int(arr[i]['h_in'])
+                name = arr[i]['last_name']+', '+arr[i]['first_name']
 
-                if temp in dict_:
-                    count = dict_[temp]
+                diff = sum - number
+
+                if diff in dict_:
+                    count = dict_[diff]
 
                     for j in range(count):
-                        x = (temp, arr[i])
+                        x = (diff, name)
                         list_.append(x)
 
-                if arr[i] in dict_:
-                    dict_[arr[i]] += 1
+                if number in dict_:
+                    dict_[number] += 1
 
                 else:
-                    dict_[arr[i]] = 1
+                    dict_[number] = 1
 
             return list_
 
@@ -71,19 +75,13 @@ def player_matches(request):
         arr = []
 
         for i in response['values']:
-            h = int(i['h_in'])
-            arr.append(h)
+            arr.append(i)
 
         n = len(arr)
 
         sum=int(sum)
 
         result_list = pairs(arr, n, sum)
-
-
-
-
-
 
 
         context = {
