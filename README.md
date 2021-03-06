@@ -14,6 +14,10 @@ To get this project up and running locally on your computer:
 1. Open a browser to `http://127.0.0.1:8000/` to open the  site
 
 
+## Here is how it should work
+
+  ![](macheight_sampleproject.gif)
+
 ## Project
 
 The project is to create a simple web front end to display data about NBA
