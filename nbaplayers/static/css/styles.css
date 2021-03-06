@@ -1,0 +1,16 @@
+th {
+  cursor: pointer;
+  background-color: darkgrey;
+}
+
+.sortable {
+  margin: 45px;
+}
+
+td {
+  padding-right: 175px;
+}
+
+form, h2 {
+  margin: 45px;
+}

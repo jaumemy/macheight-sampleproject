@@ -5,9 +5,32 @@
 {% endblock %}
 
 {% block content %}
-  <p>This is the content</p>
-  {% for i in response.values %}
-    {{ i }}
-    <br>
-  {% endfor %}
+
+  <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
+  <table class="sortable">
+
+    <tr>
+      <th>Last name</th>
+      <th>First name</th>
+      <th>Height (inches)</th>
+      <th>Height (meters)</th>
+    </tr>
+
+    {% for i in response.values  %}
+          <tr class="item">
+            <a href="#">
+              <td> <a href="{% url 'player-detail' %}">{{ i.last_name }}</a> </td>
+              <td>{{ i.first_name }}</td>
+              <td>{{ i.h_in }}</td>
+              <td>{{ i.h_meters }}</td>
+            </a>
+          </tr>
+
+    {% endfor %}
+
+  </table>
+
+
+
 {% endblock %}
