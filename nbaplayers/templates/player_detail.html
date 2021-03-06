@@ -6,8 +6,20 @@
 
 {% block content %}
 
-  <p> Player detail content</p>
+  <h2> Player detail content</h2>
 
+  <p>Name : {{last_name}}, {{first_name}}.
+    <br>
+  Height: {{h_in}} in or {{h_m}} m. </p>
+
+  <h2>List of players with the same height</h2>
+
+  <p>
+    {% for el in list_same_height %}
+      {{el}}
+      <br>
+    {% endfor %}
+  </p>
 
 
 {% endblock %}
