@@ -69,65 +69,71 @@ def player_matches(request):
         sum = request.POST.get('sum')
 
 
-        def pairs(arr, n, sum):
+        def pairs(arr, sum):
 
-            dict_ = dict()
-            list_ = []
-
-            for i in range(n):
-
-                number = int(arr[i]['h_in'])
-                name = arr[i]['last_name']+', '+arr[i]['first_name']
-
-                diff = sum - number
+            for i in arr
+            pass
 
 
-                if diff in dict_:
-                    count = dict_[diff]
-
-                    for j in range(count):
-                        ## I am not sure if next part makes efficiency O(n²). It can be taken out of the function and result will be a list of
-                        ## elements like this (80, Ŵilliams, John) etc without the first name. That's the best I could come up with
-
-                        temp_list = []
-
-                        for el in arr:
-
-                            if int(el['h_in']) == diff:
-                                el_name = el['last_name']+', '+el['first_name']
-                                temp_list.append(el_name)
-
-                        ###
-                        ###
-                        for ele in temp_list:
-                            x = (ele, name)
-                            if x not in list_:
-                                list_.append(x)
-                        # x = (el_name, name)
-                        # list_.append(x)
-
-                if number in dict_:
-                    dict_[number] += 1
-
-                else:
-                    dict_[number] = 1
-
-            return list_
-
-
-        arr = []
-
-        for i in response['values']:
-            arr.append(i)
-
-        n = len(arr)
-
-        sum=int(sum)
-
-        result_list = pairs(arr, n, sum)
-
-        if result_list == []:
-            result_list = ['No players found with this sum']
+        # def pairs(arr, n, sum):
+        # 
+        #     dict_ = dict()
+        #     list_ = []
+        #
+        #     for i in range(n):
+        #
+        #         number = int(arr[i]['h_in'])
+        #         name = arr[i]['last_name']+', '+arr[i]['first_name']
+        #
+        #         diff = sum - number
+        #
+        #
+        #         if diff in dict_:
+        #             count = dict_[diff]
+        #
+        #             for j in range(count):
+        #                 ## I am not sure if next part makes efficiency O(n²). It can be taken out of the function and result will be a list of
+        #                 ## elements like this (80, Ŵilliams, John) etc without the first name. That's the best I could come up with
+        #
+        #                 temp_list = []
+        #
+        #                 for el in arr:
+        #
+        #                     if int(el['h_in']) == diff:
+        #                         el_name = el['last_name']+', '+el['first_name']
+        #                         temp_list.append(el_name)
+        #
+        #                 ###
+        #                 ###
+        #                 for ele in temp_list:
+        #                     x = (ele, name)
+        #                     if x not in list_:
+        #                         list_.append(x)
+        #                 # x = (el_name, name)
+        #                 # list_.append(x)
+        #
+        #         if number in dict_:
+        #             dict_[number] += 1
+        #
+        #         else:
+        #             dict_[number] = 1
+        #
+        #     return list_
+        #
+        #
+        # arr = []
+        #
+        # for i in response['values']:
+        #     arr.append(i)
+        #
+        # n = len(arr)
+        #
+        # sum=int(sum)
+        #
+        # result_list = pairs(arr, n, sum)
+        #
+        # if result_list == []:
+        #     result_list = ['No players found with this sum']
 
 
         context = {
