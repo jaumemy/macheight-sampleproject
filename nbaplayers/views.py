@@ -71,12 +71,12 @@ def player_matches(request):
 
         def pairs(arr, sum):
 
-            for i in arr
+            
             pass
 
 
         # def pairs(arr, n, sum):
-        # 
+        #
         #     dict_ = dict()
         #     list_ = []
         #
