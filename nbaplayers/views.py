@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import requests
+
 import json
 
 # Create your views here.
@@ -71,7 +71,7 @@ def player_matches(request):
 
         def pairs(arr, sum):
 
-            
+
             pass
 
 
