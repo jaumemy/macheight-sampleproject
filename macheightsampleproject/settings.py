@@ -24,6 +24,7 @@ TEMPLATES_DIR = Path.joinpath(BASE_DIR, 'templates')
 SECRET_KEY = 'uyn_3b1dd&28siho_5=b&(*!%^hlk$(x*x^!k21#!w7pcli)f^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEbug will be set to False
 DEBUG = True
 
 ALLOWED_HOSTS = []
