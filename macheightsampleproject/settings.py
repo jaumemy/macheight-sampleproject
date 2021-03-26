@@ -123,7 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [Path.joinpath(BASE_DIR,"dashboard/static")]
+STATICFILES_DIRS = [Path.joinpath(BASE_DIR,"nbaplayers/static")]
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = BASE_DIR / 'staticfiles'  #. os.path.join(BASE_DIR, 'staticfiles')
