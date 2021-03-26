@@ -1,5 +1,7 @@
 ### Mach Eight Sample Project
 
+Take a look here [Nba Players Project](https://nbaplayers-project.herokuapp.com/)
+
 
 ## Quick Start
 
